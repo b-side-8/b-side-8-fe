@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev:next-app": "pnpm --dir packages/next-app run dev",
+    "dev:next-app": "pnpm --dir packages/dreamers-fe run dev",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "workspaces": ["packages/*"],
