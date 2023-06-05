@@ -5,14 +5,20 @@
   "main": "index.js",
   "scripts": {
     "dev:next-app": "pnpm --dir packages/dreamers-fe run dev",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepare": "husky install",
+    "lint-all": "eslint \"packages/**\"",
+    "lint": "eslint \"packages/**\" --ext .js,.ts"
   },
-  "workspaces": ["packages/*"],
+  "workspaces": [
+    "packages/*"
+  ],
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "packageManager": "pnpm@7.9.0", 
+  "packageManager": "pnpm@7.9.0",
   "devDependencies": {
-    "pnpm": "^7.9.0"
+    "pnpm": "^7.9.0",
+    "husky": "^8.0.0"
   }
 }
