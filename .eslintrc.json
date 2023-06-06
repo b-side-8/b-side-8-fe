@@ -17,7 +17,13 @@
 // }
 {
   "root": true,
-  "ignorePatterns": ["packages/**/node_modules", "*.json", "*.ico", "*.svg", "*.md"],
+  "ignorePatterns": [
+    "packages/**/node_modules",
+    "*.json",
+    "*.ico",
+    "*.svg",
+    "*.md"
+  ],
   "overrides": [
     {
       "files": ["**/*.js", "**/*.jsx", "**/*.ts", "**/*.tsx"],
