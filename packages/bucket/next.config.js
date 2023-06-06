@@ -1,4 +1,9 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {}
+const nextConfig = {
+  compress: true, // 파일압축 웹 로딩속도 향상
+  sassOptions: {
+    includePaths: [path.join(__dirname, "styles")],
+  },
+};
 
-export default nextConfig
+module.exports = nextConfig;
