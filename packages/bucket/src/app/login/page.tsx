@@ -6,9 +6,6 @@ import { LoginButton, LogoutButton } from '@/components/Buttons/SnsButton';
 import { useSession } from 'next-auth/react';
 import Button from '@/components/Buttons';
 
-const rootStyles = getComputedStyle(document.documentElement);
-const primaryColor = rootStyles.getPropertyValue('--primary');
-
 export default function Login() {
   const { data: session } = useSession();
 
@@ -30,7 +27,7 @@ export default function Login() {
           alt='bucket logo'
         />
       </div>
-      <Button size='small' color={primaryColor}>
+      <Button size='small'>
         <Typograph variant='body3'>버튼</Typograph>
       </Button>
       <LoginButton provider='kakao' />

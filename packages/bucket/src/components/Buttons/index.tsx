@@ -1,7 +1,7 @@
 import styles from './button.module.scss';
 
 interface IButtonProps {
-  varient?: 'social' | 'general' | 'container';
+  varient?: 'kakao' | 'general' | 'container';
   onClick?: () => void;
   type?: 'button' | 'submit' | 'reset';
   isDisabled?: boolean;
@@ -17,7 +17,6 @@ const Button = ({
   isDisabled,
   size,
   children,
-  color,
   isLoading, // 추후 구현
 }: IButtonProps) => {
   return (
@@ -27,8 +26,7 @@ const Button = ({
       disabled={isDisabled}
       className={`${styles.button} ${
         size === 'large' ? styles.buttonLarge : styles.buttonSmall
-      }`}
-      style={{ backgroundColor: color }}
+      }  ${varient === 'kakao' ? styles.kakao : ''}`}
     >
       {children}
     </button>

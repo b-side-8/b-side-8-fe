@@ -10,13 +10,9 @@ interface ISnsButtonProps {
   provider: 'kakao' | 'naver';
 }
 
-const rootStyles = getComputedStyle(document.documentElement);
-
-const kakaoColor = rootStyles.getPropertyValue('--kakao');
-
 export const LoginButton = ({ provider }: ISnsButtonProps) => {
   return (
-    <Button onClick={() => signIn(provider)} color={kakaoColor}>
+    <Button onClick={() => signIn(provider)} varient='kakao'>
       {provider === 'kakao' ? (
         <div className={styles.btnTextWrap}>
           <Image
