@@ -1,0 +1,16 @@
+.kakaoButton {
+  width: 343px;
+  height: 48px;
+  border-radius: 8px;
+  padding: 14px 16px;
+  background-color: var(--kakao);
+  border-style: none;
+}
+
+.btnTextWrap {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}

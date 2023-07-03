@@ -1,4 +1,4 @@
-import Typograph from '@/components/typograph';
+import Typograph from '@/components/Typograph';
 
 export default function Home() {
   return (
