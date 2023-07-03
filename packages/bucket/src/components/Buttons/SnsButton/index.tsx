@@ -4,14 +4,19 @@ import { signIn, signOut } from 'next-auth/react';
 import Link from 'next/link';
 import styles from './snsButton.module.scss';
 import Image from 'next/image';
+import Button from '..';
 
 interface ISnsButtonProps {
   provider: 'kakao' | 'naver';
 }
 
+const rootStyles = getComputedStyle(document.documentElement);
+
+const kakaoColor = rootStyles.getPropertyValue('--kakao');
+
 export const LoginButton = ({ provider }: ISnsButtonProps) => {
   return (
-    <button className={styles.kakaoButton} onClick={() => signIn(provider)}>
+    <Button onClick={() => signIn(provider)} color={kakaoColor}>
       {provider === 'kakao' ? (
         <div className={styles.btnTextWrap}>
           <Image
@@ -25,7 +30,7 @@ export const LoginButton = ({ provider }: ISnsButtonProps) => {
       ) : (
         '네이버로 로그인'
       )}
-    </button>
+    </Button>
   );
 };
 
