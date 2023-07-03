@@ -2,11 +2,14 @@
 import Typograph from '@/components/Typograph';
 import styles from './login.module.scss';
 import Image from 'next/image';
-import { LoginButton } from '@/components/Buttons/SnsButton';
+import { LoginButton, LogoutButton } from '@/components/Buttons/SnsButton';
+import { useSession } from 'next-auth/react';
 
 export default function Login() {
+  const { data: session } = useSession();
   return (
     <div className={styles.mobileContainer}>
+      {session ? <>{session.user?.name}</> : <>로그인 되지 않았음</>}
       <div className={styles.loginContainer}>
         dd
         <div className={styles.titleWrap}>
@@ -22,19 +25,9 @@ export default function Login() {
           alt='bucket logo'
         />
       </div>
-      <button
-        onClick={() => {
-          console.log('d');
-        }}
-        type='button'
-        className={styles.kakaoButton}
-      >
-        로그인
-      </button>
-      <form method='POST' action='/api/signincheck'>
-        <button type='submit'>카카오 로그인</button>
-      </form>
-      <LoginButton />
+
+      <LoginButton provider='kakao' />
+      <LogoutButton />
     </div>
   );
 }
