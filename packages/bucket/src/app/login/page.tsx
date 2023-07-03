@@ -4,9 +4,14 @@ import styles from './login.module.scss';
 import Image from 'next/image';
 import { LoginButton, LogoutButton } from '@/components/Buttons/SnsButton';
 import { useSession } from 'next-auth/react';
+import Button from '@/components/Buttons';
+
+const rootStyles = getComputedStyle(document.documentElement);
+const primaryColor = rootStyles.getPropertyValue('--primary');
 
 export default function Login() {
   const { data: session } = useSession();
+
   return (
     <div className={styles.mobileContainer}>
       {session ? <>{session.user?.name}</> : <>로그인 되지 않았음</>}
@@ -25,7 +30,9 @@ export default function Login() {
           alt='bucket logo'
         />
       </div>
-
+      <Button size='small' color={primaryColor}>
+        <Typograph variant='body3'>버튼</Typograph>
+      </Button>
       <LoginButton provider='kakao' />
       <LogoutButton />
     </div>
