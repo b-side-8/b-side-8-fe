@@ -8,6 +8,7 @@ interface ITextFieldProps {
   error?: boolean;
   active?: boolean;
   isvalid?: boolean;
+  placeholder?: string;
   otherProps?: React.InputHTMLAttributes<HTMLInputElement>; // 다른 필요한 props들
 }
 
@@ -15,6 +16,7 @@ const TextField: React.FC<ITextFieldProps> = ({
   error = false,
   active = false,
   isvalid,
+  placeholder,
   otherProps,
 }) => {
   const getClassName = (): string => {
@@ -29,7 +31,11 @@ const TextField: React.FC<ITextFieldProps> = ({
   return (
     <div>
       <div className={classNameInputWrapper}>
-        <input className={styles.textinput} {...otherProps} />
+        <input
+          className={styles.textinput}
+          placeholder={placeholder}
+          {...otherProps}
+        />
         {isvalid ? (
           <Image
             src='/images/checked.png'
