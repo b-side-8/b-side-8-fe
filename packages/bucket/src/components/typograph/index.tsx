@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import styles from './Typograph.module.scss';
+import styles from './typograph.module.scss';
 import classNames from 'classnames';
 
 interface ITypographProps {
