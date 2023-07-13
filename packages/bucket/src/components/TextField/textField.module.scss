@@ -1,0 +1,36 @@
+.inputWrapper {
+  width: 343px;
+  border-radius: 8px;
+  border: 1px solid var(--greyscale-G02);
+
+  padding: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.textinput {
+  width: 100%;
+}
+
+.error {
+  border-color: var(--red-warnning);
+}
+
+.active {
+  border-color: var(--greyscale-G02);
+}
+
+.helperText {
+  color: var(--red-error);
+  margin-top: 8px;
+  margin-left: 8px;
+}
+
+.inputWrapper {
+}
+.validIcon {
+  position: absolute;
+  right: 12px;
+  top: 0px;
+}
