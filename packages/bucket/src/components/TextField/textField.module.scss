@@ -1,16 +1,26 @@
 .inputWrapper {
-  width: 343px;
   border-radius: 8px;
   border: 1px solid var(--greyscale-G02);
-
-  padding: 12px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
+.inputWrapperMedium {
+  width: 335px;
+}
+
+.inputWrapperSmall {
+  width: 105px;
+}
+
 .textinput {
   width: 100%;
+  height: 100%;
+  padding: 12px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 18px;
 }
 
 .error {

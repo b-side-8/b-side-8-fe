@@ -5,24 +5,37 @@ import Typograph from '../Typograph';
 import Image from 'next/image';
 
 interface ITextFieldProps {
+  size?: 'small' | 'medium';
   error?: boolean;
   active?: boolean;
+  type?: string;
   isvalid?: boolean;
   placeholder?: string;
+  helperWaringText?: string;
+  helperText?: string;
   otherProps?: React.InputHTMLAttributes<HTMLInputElement>; // 다른 필요한 props들
 }
 
 const TextField: React.FC<ITextFieldProps> = ({
+  size = 'medium',
   error = false,
   active = false,
+  type = 'string',
   isvalid,
   placeholder,
   otherProps,
+  helperWaringText = '',
+  helperText = '',
 }) => {
   const getClassName = (): string => {
     let className = styles.inputWrapper;
     if (error) className = classNames(className, styles.error);
     if (active) className = classNames(className, styles.active);
+    if (size === 'small') {
+      className = classNames(className, styles.inputWrapperSmall);
+    } else {
+      className = classNames(className, styles.inputWrapperMedium);
+    }
     return className;
   };
 
@@ -33,6 +46,7 @@ const TextField: React.FC<ITextFieldProps> = ({
       <div className={classNameInputWrapper}>
         <input
           className={styles.textinput}
+          type={type}
           placeholder={placeholder}
           {...otherProps}
         />
@@ -48,7 +62,7 @@ const TextField: React.FC<ITextFieldProps> = ({
         ) : null}
       </div>
       <Typograph variant='caption2' className={styles.helperText}>
-        {isvalid === false ? '유효하지 않은 이메일입니다.' : ''}
+        {isvalid === false ? helperWaringText : helperText}
       </Typograph>
     </div>
   );
