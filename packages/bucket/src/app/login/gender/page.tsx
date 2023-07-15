@@ -7,7 +7,7 @@ import { usePathname, useRouter, useSearchParams } from 'next/navigation';
 import { useState } from 'react';
 import styles from './gender.module.scss';
 
-function Gender() {
+export default function Gender() {
   const router = useRouter();
   const [gender, setGender] = useState('');
   const onCardClick = (gender: 'man' | 'woman') => {
@@ -48,4 +48,3 @@ function Gender() {
     </div>
   );
 }
-export default Gender;

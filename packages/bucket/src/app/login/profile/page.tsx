@@ -2,35 +2,38 @@
 import TextField from '@/components/TextField';
 import TopNavigateBar from '@/components/TopNavigateBar';
 import Typograph from '@/components/Typograph';
-import styles from './nickName.module.scss';
+import styles from './profile.module.scss';
 import { useForm, SubmitHandler } from 'react-hook-form';
 import { useEffect, useRef, useState } from 'react';
 import Button from '@/components/Buttons';
 import { usePathname, useRouter, useSearchParams } from 'next/navigation';
+import Image from 'next/image';
 
-export default function NcikName() {
+export default function Profile() {
   const router = useRouter();
 
   return (
     <div className={styles.nickNameWrapper}>
       <div>
         <TopNavigateBar />
-        <Typograph className={styles.nickNameTitle} variant='title1'>
-          닉네임을 만들어 볼까요?
+        <Typograph className={styles.profileTitle} variant='title1'>
+          프로필 사진을 등록해주세요.
         </Typograph>
-        <div className={styles.textFieldWrapper}>
-          <TextField
-            placeholder='닉네임'
-            helperWaringText='이미 사용중인 닉네임이에요'
-            helperText='한글 또는 영문 10자 이하로 입력해주세요.'
+        <div className={styles.ImagedWrapper}>
+          <Image
+            src='/images/profile_default.png'
+            alt={'profile'}
+            width={160}
+            height={160}
           />
+          <button>사진편집</button>
         </div>
       </div>
       <div className={styles.buttonWrapper}>
         <Button
           size='large'
           onClick={() => {
-            router.push('/login/birth');
+            router.push('/main');
           }}
         >
           다음
