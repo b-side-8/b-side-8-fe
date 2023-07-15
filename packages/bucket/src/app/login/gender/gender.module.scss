@@ -1,0 +1,22 @@
+.genderWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+}
+.genderTitle {
+  margin-bottom: 30px;
+  padding: 0px 20px;
+}
+.genderCardWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+}
+.buttonWrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 32px;
+}

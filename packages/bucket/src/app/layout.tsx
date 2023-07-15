@@ -5,6 +5,7 @@ import { getServerSession } from 'next-auth/next';
 import { authOptions } from './lib/auth';
 import { cookies } from 'next/headers';
 import Providers from './Provider';
+import Layout from '@/components/Layout';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -22,7 +23,9 @@ export default async function RootLayout({
   return (
     <html lang='en'>
       <body className={inter.className}>
-        <Providers session={session}>{children}</Providers>
+        <Providers session={session}>
+          <Layout>{children}</Layout>
+        </Providers>
       </body>
     </html>
   );

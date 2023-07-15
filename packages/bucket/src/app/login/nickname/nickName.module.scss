@@ -1,0 +1,19 @@
+.nickNameWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+}
+.nickNameTitle {
+  margin-bottom: 30px;
+}
+.textFieldWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.buttonWrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 32px;
+}
