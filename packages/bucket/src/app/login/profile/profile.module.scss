@@ -1,0 +1,21 @@
+.nickNameWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+}
+.profileTitle {
+  margin-bottom: 30px;
+}
+.ImagedWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+.buttonWrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 32px;
+}
