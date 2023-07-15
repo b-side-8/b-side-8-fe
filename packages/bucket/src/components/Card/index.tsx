@@ -3,15 +3,24 @@ import Image from 'next/image';
 import styles from './card.module.scss';
 import Typograph from '../Typograph';
 import { useState } from 'react';
-const Card = ({ type, size }: { type: 'man' | 'woman'; size: number }) => {
-  const [active, setActive] = useState(false);
-  const onCardClick = () => {
-    setActive((_active) => !_active);
-  };
+
+type genderType = 'man' | 'woman';
+
+const Card = ({
+  type,
+  size,
+  active,
+  onClick,
+}: {
+  type: genderType;
+  size: number;
+  active: boolean;
+  onClick: (gender: genderType) => void;
+}) => {
   return (
     <div
       className={active ? styles.activeCardContainer : styles.cardContainer}
-      onClick={onCardClick}
+      onClick={() => onClick(type)}
     >
       <div className={styles.imageTextWrapper}>
         {type === 'man' ? (
@@ -29,7 +38,9 @@ const Card = ({ type, size }: { type: 'man' | 'woman'; size: number }) => {
             height={size}
           />
         )}
-        <Typograph variant='body1'>이름</Typograph>
+        <Typograph variant='body1'>
+          {type === 'man' ? '남성' : '여성'}
+        </Typograph>
       </div>
     </div>
   );
