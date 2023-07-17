@@ -1,6 +1,7 @@
 import { create, StateCreator } from 'zustand';
+import { devtools } from 'zustand/middleware';
 
-interface UserInfoState {
+interface IUserInfoStore {
   userInfo: {
     nickname: string;
     birth: {
@@ -17,7 +18,7 @@ interface UserInfoState {
   setProfileImg: (profileImg: string) => void;
 }
 
-const userInfoStore = create<UserInfoState>((set, get) => ({
+const userInfoStore = create<IUserInfoStore>((set, get) => ({
   userInfo: {
     nickname: '',
     birth: { yyyy: '', mm: '', dd: '' },

@@ -33,7 +33,7 @@ export default function Profile() {
         <Button
           size='large'
           onClick={() => {
-            router.push('/main');
+            router.push('login/complete');
           }}
         >
           다음
