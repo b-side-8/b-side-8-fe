@@ -9,6 +9,7 @@ interface ITextFieldProps {
   error?: boolean;
   active?: boolean;
   type?: string;
+  value?: string;
   onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
   name?: string;
   isvalid?: boolean;
@@ -23,6 +24,7 @@ const TextField: React.FC<ITextFieldProps> = ({
   error = false,
   active = false,
   type = 'string',
+  value,
   onChange,
   name,
   isvalid,
@@ -50,6 +52,7 @@ const TextField: React.FC<ITextFieldProps> = ({
       <div className={classNameInputWrapper}>
         <input
           className={styles.textinput}
+          value={value}
           onChange={onChange}
           name={name}
           type={type}
