@@ -1,0 +1,32 @@
+.myCardWrapper {
+}
+.myCard {
+  background-color: var(--sevondary);
+  padding: 16px;
+  border-radius: 12px;
+}
+.myCardHeader {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.myCardHeaderProfile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.myInfo {
+}
+
+.myCardContents {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: rgba(255, 255, 255, 0.16);
+  padding: 10px;
+  gap: 2px;
+  color: var(--white);
+  border-radius: 12px;
+}
