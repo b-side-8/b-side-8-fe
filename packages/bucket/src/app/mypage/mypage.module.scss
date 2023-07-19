@@ -1,4 +1,6 @@
 .myCardWrapper {
+  padding: 8px 0px 20px 0px;
+  margin-bottom: 10px;
 }
 .myCard {
   background-color: var(--sevondary);
@@ -29,4 +31,8 @@
   gap: 2px;
   color: var(--white);
   border-radius: 12px;
+}
+
+.topicListWrapper {
+  gap: 10px;
 }

@@ -24,7 +24,6 @@ export default function Gender() {
   };
   return (
     <div className={styles.genderWrapper}>
-      {JSON.stringify(userInfo)}
       <div>
         <TopNavigateBar />
         <Typograph className={styles.genderTitle} variant='title1'>

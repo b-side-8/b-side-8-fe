@@ -41,7 +41,6 @@ export default function NcikName() {
 
   return (
     <div className={styles.nickNameWrapper}>
-      {JSON.stringify(userInfo)}
       <div>
         <TopNavigateBar />
         <Typograph className={styles.nickNameTitle} variant='title1'>

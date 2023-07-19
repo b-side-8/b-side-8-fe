@@ -43,7 +43,6 @@ function NcikName() {
   return (
     <div className={styles.birthWrapper}>
       <div>
-        {JSON.stringify(userInfo)}
         <TopNavigateBar />
         <Typograph className={styles.birthTitle} variant='title1'>
           생년월일이 궁금해요.
