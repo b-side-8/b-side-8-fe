@@ -43,7 +43,11 @@ export default function Mypage() {
           </div>
         </div>
       </div>
-      <TopicList />
+      <div className={styles.topicListWrapper}>
+        <TopicList />
+        <TopicList />
+        <TopicList />
+      </div>
     </div>
   );
 }

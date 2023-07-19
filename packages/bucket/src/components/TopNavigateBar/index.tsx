@@ -11,7 +11,7 @@ const TopNavigateBar = ({ type = 'navigator' }: INavigator) => {
     switch (type) {
       case 'navigator':
         return (
-          <div className={styles.paddingLayout}>
+          <div>
             <ActiveLink href={'login'}>
               <Image src='/arrow_left.svg' alt='arrow' width={24} height={24} />
             </ActiveLink>
@@ -19,7 +19,7 @@ const TopNavigateBar = ({ type = 'navigator' }: INavigator) => {
         );
       case 'mypage':
         return (
-          <div className={styles.paddingSpaceBetweenLayout}>
+          <div className={styles.myPageLayoutContainer}>
             <Typograph variant='title1'>bucket</Typograph>
             <Image src='/setting.svg' alt='arrow' width={24} height={24} />
           </div>

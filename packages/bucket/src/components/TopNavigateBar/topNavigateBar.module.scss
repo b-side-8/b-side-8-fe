@@ -3,13 +3,9 @@
   display: flex;
   align-items: center;
 }
-.paddingLayout {
-  width: 100%;
-  padding: 0 16px;
-}
-.paddingSpaceBetweenLayout {
+
+.myPageLayoutContainer {
   display: flex;
   justify-content: space-between;
   width: 100%;
-  padding: 0 16px;
 }
