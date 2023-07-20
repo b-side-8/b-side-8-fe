@@ -12,7 +12,11 @@ interface ISnsButtonProps {
 
 export const LoginButton = ({ provider }: ISnsButtonProps) => {
   return (
-    <Button onClick={() => signIn(provider)} varient='kakao'>
+    <Button
+      // onClick={() => signIn(provider)}
+      varient='kakao'
+      size='large'
+    >
       {provider === 'kakao' ? (
         <div className={styles.btnTextWrap}>
           <Image

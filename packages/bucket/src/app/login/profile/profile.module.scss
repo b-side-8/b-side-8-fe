@@ -1,18 +1,19 @@
-.birthWrapper {
+.nickNameWrapper {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   height: 100vh;
 }
-.textFieldWrapper {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-  width: 100%;
-}
-.birthTitle {
+.profileTitle {
   margin-bottom: 30px;
   padding: 0px 20px;
+}
+.ImagedWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
 }
 .buttonWrapper {
   display: flex;

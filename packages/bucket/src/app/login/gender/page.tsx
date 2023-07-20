@@ -6,10 +6,19 @@ import Card from '@/components/Card';
 import { usePathname, useRouter, useSearchParams } from 'next/navigation';
 import { useState } from 'react';
 import styles from './gender.module.scss';
+import userInfoStore from '@/zustand/userInfoStore';
 
-function Gender() {
+const useUserInfoGender = () => {
+  return userInfoStore((store) => ({
+    userInfo: store.userInfo,
+    setGender: store.setGender,
+  }));
+};
+
+export default function Gender() {
+  const { userInfo, setGender } = useUserInfoGender();
   const router = useRouter();
-  const [gender, setGender] = useState('');
+
   const onCardClick = (gender: 'man' | 'woman') => {
     setGender(gender);
   };
@@ -23,12 +32,12 @@ function Gender() {
         <div className={styles.genderCardWrapper}>
           <Card
             onClick={onCardClick}
-            active={gender === 'man'}
+            active={userInfo.gender === 'man'}
             type={'man'}
             size={80}
           />
           <Card
-            active={gender === 'woman'}
+            active={userInfo.gender === 'woman'}
             onClick={onCardClick}
             type={'woman'}
             size={80}
@@ -39,7 +48,7 @@ function Gender() {
         <Button
           size='large'
           onClick={() => {
-            router.push('/login/gender');
+            router.push('/login/profile');
           }}
         >
           다음
@@ -48,4 +57,3 @@ function Gender() {
     </div>
   );
 }
-export default Gender;

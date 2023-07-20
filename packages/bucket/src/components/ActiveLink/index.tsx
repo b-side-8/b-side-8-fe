@@ -17,11 +17,7 @@ function ActiveLink({
   };
 
   return (
-    <a
-      href={href}
-      onClick={handleClick}
-      // style={style}
-    >
+    <a href={href} onClick={handleClick}>
       {children}
     </a>
   );

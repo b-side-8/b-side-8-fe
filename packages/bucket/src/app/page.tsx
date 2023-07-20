@@ -1,6 +1,11 @@
+'use client';
+
 import Typograph from '@/components/Typograph';
+import { useRouter } from 'next/navigation';
 
 export default function Home() {
+  const router = useRouter();
+
   return (
     <div>
       <Typograph variant='h1'>h1</Typograph>

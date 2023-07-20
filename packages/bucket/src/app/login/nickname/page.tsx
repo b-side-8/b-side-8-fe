@@ -7,9 +7,37 @@ import { useForm, SubmitHandler } from 'react-hook-form';
 import { useEffect, useRef, useState } from 'react';
 import Button from '@/components/Buttons';
 import { usePathname, useRouter, useSearchParams } from 'next/navigation';
+import userInfoStore from '@/zustand/userInfoStore';
 
-function NcikName() {
+const useUserInfoNickName = () => {
+  return userInfoStore((store) => ({
+    userInfo: store.userInfo,
+    setNickname: store.setNickname,
+  }));
+};
+
+export default function NcikName() {
+  const { userInfo, setNickname } = useUserInfoNickName();
+  const [error, setError] = useState(false);
+
   const router = useRouter();
+
+  const onChangeInput = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const { value } = e.target;
+    // 정규식 패턴을 사용하여 입력값 유효성 검사
+    const regex = /^[a-zA-Z가-힣]{0,10}$/;
+    if (regex.test(value)) {
+      setNickname(value);
+      setError(false);
+    } else {
+      setNickname(value);
+      setError(true);
+    }
+  };
+
+  const onClickNext = () => {
+    if (!error) router.push('/login/birth');
+  };
 
   return (
     <div className={styles.nickNameWrapper}>
@@ -20,24 +48,21 @@ function NcikName() {
         </Typograph>
         <div className={styles.textFieldWrapper}>
           <TextField
+            value={userInfo.nickname}
             placeholder='닉네임'
-            helperWaringText='이미 사용중인 닉네임이에요'
+            helperWaringText='한글 또는 영문 10자 이하로 입력해주세요.'
             helperText='한글 또는 영문 10자 이하로 입력해주세요.'
+            error={error}
+            isvalid={!error}
+            onChange={onChangeInput}
           />
         </div>
       </div>
       <div className={styles.buttonWrapper}>
-        <Button
-          size='large'
-          onClick={() => {
-            router.push('/login/birth');
-          }}
-        >
+        <Button size='large' onClick={onClickNext}>
           다음
         </Button>
       </div>
     </div>
   );
 }
-
-export default NcikName;

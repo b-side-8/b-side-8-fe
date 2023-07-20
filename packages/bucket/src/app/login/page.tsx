@@ -11,9 +11,7 @@ export default function Login() {
 
   return (
     <div className={styles.mobileContainer}>
-      {session ? <>{session.user?.name}</> : <>로그인 되지 않았음</>}
       <div className={styles.loginContainer}>
-        dd
         <div className={styles.titleWrap}>
           <Typograph className={styles.subtitleText} variant='subtitle'>
             나만의 버킷리스트
@@ -27,11 +25,14 @@ export default function Login() {
           alt='bucket logo'
         />
       </div>
-      <Button size='small'>
-        <Typograph variant='body3'>버튼</Typograph>
-      </Button>
-      <LoginButton provider='kakao' />
-      <LogoutButton />
+      <a
+        href={
+          'https://kauth.kakao.com/oauth/authorize?response_type=code&client_id=20b68e93f8a5a97696de7503ec0e8315&redirect_uri=http%3A%2F%2F49.50.160.93%3A7070%2Foauth%2Fkakao'
+        }
+      >
+        <LoginButton provider='kakao' />
+      </a>
+      {/* <LogoutButton /> */}
     </div>
   );
 }

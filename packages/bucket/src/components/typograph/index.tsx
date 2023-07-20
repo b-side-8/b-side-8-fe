@@ -19,6 +19,7 @@ interface ITypographProps {
     | 'body3'
     | 'body4'
     | 'caption2'
+    | 'caption1'
     | 'span';
   className?: string;
   children: React.ReactNode;
@@ -62,6 +63,8 @@ const Typograph = ({
         return ['p', styles.body1];
       case 'body4':
         return ['p', styles.body1];
+      case 'caption1':
+        return ['p', styles.caption1];
       case 'caption2':
         return ['p', styles.caption2];
       case 'span':

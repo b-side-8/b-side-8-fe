@@ -2,5 +2,10 @@
   height: 56px;
   display: flex;
   align-items: center;
-  padding-left: 12px;
+}
+
+.myPageLayoutContainer {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
 }
