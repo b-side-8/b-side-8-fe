@@ -1,5 +1,9 @@
 @import 'reset.module';
 @import 'variable';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 
 div,
 p,
@@ -18,3 +22,4 @@ th,
 td {
   font-family: 'Pretendard';
 }
+
