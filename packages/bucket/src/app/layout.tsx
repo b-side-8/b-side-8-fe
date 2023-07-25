@@ -21,7 +21,7 @@ export default async function RootLayout({
 }) {
   const session = cookies().get('session');
   return (
-    <html lang='en'>
+    <html lang="en">
       <body className={inter.className}>
         <Providers session={session}>
           <Layout>{children}</Layout>
