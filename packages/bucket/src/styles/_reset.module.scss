@@ -28,7 +28,6 @@ code,
 del,
 dfn,
 em,
-img,
 ins,
 kbd,
 q,
@@ -135,4 +134,16 @@ q::after {
 table {
   border-collapse: collapse;
   border-spacing: 0;
+}
+
+// input css reset
+
+/* input 기본 스타일 초기화 */
+input {
+  all: unset;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }

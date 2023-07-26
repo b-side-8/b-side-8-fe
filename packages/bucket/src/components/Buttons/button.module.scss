@@ -1,0 +1,29 @@
+.button {
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-style: none;
+  border-radius: 8px;
+  background-color: var(--primary);
+  color: var(--white);
+}
+
+.buttonSmall {
+  width: 166px;
+}
+.buttonLarge {
+  width: 343px;
+}
+
+.btnTextWrap {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.kakao {
+  background-color: var(--kakao);
+}

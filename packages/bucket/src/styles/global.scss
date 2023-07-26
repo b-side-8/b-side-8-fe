@@ -1,4 +1,9 @@
 @import 'reset.module';
+@import 'variable';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 
 div,
 p,
@@ -15,5 +20,6 @@ h5,
 h6,
 th,
 td {
-  font-family: 'AppleSDGothicNeo';
+  font-family: 'Pretendard';
 }
+

@@ -1,0 +1,40 @@
+.mobileContainer {
+  padding: 0 20px;
+  height: 100vh;
+  display: flex;
+
+  align-items: center;
+  flex-direction: column;
+}
+.loginContainer {
+  padding-top: 118px;
+  margin-bottom: 56px;
+}
+
+.titleWrap {
+  text-align: center;
+  margin-bottom: 16px;
+}
+.logoText {
+  font-family: 'BM HANNA_TTF';
+  font-style: normal;
+  font-size: 64px;
+  line-height: 70px;
+}
+.subtitleText {
+  margin-bottom: 4px;
+}
+
+.kakaoButton {
+  background-color: #fae64c;
+  display: flex;
+  border: none;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 14px 16px;
+  gap: 10px;
+  width: 335px;
+  height: 48px;
+  border-radius: 8px;
+}

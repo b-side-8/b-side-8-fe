@@ -1,0 +1,26 @@
+.cardContainer {
+  display: inline-block;
+  background-color: var(--white);
+  padding: 24px 20px;
+  width: auto;
+  text-align: center;
+  border-radius: 20px;
+  border: 2px solid var(--white);
+  cursor: pointer;
+  box-shadow: 0px 4px 16px 0px #00000014;
+}
+.activeCardContainer {
+  display: inline-block;
+  background-color: var(--white);
+  padding: 24px 20px;
+  width: auto;
+  text-align: center;
+  border-radius: 20px;
+  border: 2px solid var(--primary);
+  box-shadow: 0px 4px 16px 0px #00000014;
+}
+
+.imageTextWrapper {
+  width: 120px;
+  gap: 4px;
+}
