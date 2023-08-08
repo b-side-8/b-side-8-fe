@@ -1,7 +1,7 @@
 import TopNavigateBar from '@/components/TopNavigateBar';
 import styles from './mypage.module.scss';
 import Image from 'next/image';
-import Typograph from '@/components/Typograph';
+import Typograph from '@/components/typograph';
 import TopicList from '@/components/TopicList';
 
 export default function Mypage() {

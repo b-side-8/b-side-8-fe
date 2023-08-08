@@ -1,6 +1,6 @@
 'use client';
 
-import Typograph from '@/components/Typograph';
+import Typograph from '@/components/typograph';
 import { useRouter } from 'next/navigation';
 
 export default function Home() {

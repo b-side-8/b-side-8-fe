@@ -1,5 +1,5 @@
 import ActiveLink from '../ActiveLink';
-import Typograph from '../Typograph';
+import Typograph from '../typograph';
 import styles from './topNavigateBar.module.scss';
 import Image from 'next/image';
 

@@ -1,5 +1,5 @@
 'use client';
-import Typograph from '../Typograph';
+import Typograph from '../typograph';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import styles from './topicList.module.scss';
 import 'swiper/css';

@@ -1,7 +1,7 @@
 'use client';
 import Image from 'next/image';
 import styles from './card.module.scss';
-import Typograph from '../Typograph';
+import Typograph from '../typograph';
 import { useState } from 'react';
 
 type genderType = 'man' | 'woman';
