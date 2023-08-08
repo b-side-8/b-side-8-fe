@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './TextField.module.scss';
 import classNames from 'classnames';
-import Typograph from '../Typograph';
+import Typograph from '../typograph';
 import Image from 'next/image';
 
 interface ITextFieldProps {

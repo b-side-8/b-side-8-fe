@@ -1,7 +1,7 @@
 'use client';
 import TextField from '@/components/TextField';
 import TopNavigateBar from '@/components/TopNavigateBar';
-import Typograph from '@/components/Typograph';
+import Typograph from '@/components/typograph';
 import styles from './profile.module.scss';
 import { useForm, SubmitHandler } from 'react-hook-form';
 import { useEffect, useRef, useState } from 'react';

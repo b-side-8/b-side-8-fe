@@ -1,5 +1,5 @@
 'use client';
-import Typograph from '@/components/Typograph';
+import Typograph from '@/components/typograph';
 import styles from './login.module.scss';
 import Image from 'next/image';
 import { LoginButton, LogoutButton } from '@/components/Buttons/SnsButton';
