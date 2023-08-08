@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './TextField.module.scss';
+import styles from './textField.module.scss';
 import classNames from 'classnames';
 import Typograph from '../typograph';
 import Image from 'next/image';
