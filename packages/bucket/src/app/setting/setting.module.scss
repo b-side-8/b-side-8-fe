@@ -1,0 +1,19 @@
+.menuWrapper {
+  margin-bottom: 16px;
+}
+
+.menuItem {
+  margin: 13px 0;
+}
+.flexWrappper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logoutButton {
+  display: flex;
+  align-items: center;
+  height: 32px;
+  font-size: 14px;
+  color: var(--disabled-grey);
+}
