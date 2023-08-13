@@ -2,9 +2,10 @@
 
 import Image from 'next/image';
 import styles from './profile.module.scss';
-import Typograph from '@/components/Typograph';
+
 import { useState } from 'react';
 import ProfileImageSelector from '@/components/ProfileImageSelector';
+import Typograph from '@/components/typograph';
 
 export default function Profile() {
   const [profileImage, setProfileImage] = useState<string>(
