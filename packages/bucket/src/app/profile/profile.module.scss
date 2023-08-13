@@ -1,0 +1,23 @@
+.profileImage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 160px;
+}
+.imageWrapper {
+  position: relative;
+}
+.imageChageButton {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.menuWrapper {
+}
+
+.menuItem {
+  margin: 13px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
