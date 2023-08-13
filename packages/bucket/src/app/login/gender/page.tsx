@@ -1,6 +1,6 @@
 'use client';
 import TopNavigateBar from '@/components/TopNavigateBar';
-import Typograph from '@/components/Typograph';
+import Typograph from '@/components/typograph';
 import Button from '@/components/Buttons';
 import Card from '@/components/Card';
 import { usePathname, useRouter, useSearchParams } from 'next/navigation';
